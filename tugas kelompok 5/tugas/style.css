@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kalnia+Glaze:wght@100..700&display=swap');
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.background {
+  background: linear-gradient(rgba(0,0,0,0) 0% ,#000 14%) ;
+  background-image: url(background/langit\ ungu2.PNG);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/* logo */
+.logo img {
+  position: absolute;
+  top: 0;
+  left: 50px;
+  width: 120px;
+  height: auto;
+}
+
+.container {
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  scroll-snap-align: start;
+  transition: 2ms;
+}
+
+button {
+  position: absolute;
+  top: 50%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 10;
+  font-size: 24px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+/* two */
+/* CSS yang diperbarui */
+
+.two {
+  margin-left: 20px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  background-image: url();
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.card .wir{
+  height: 80%;
+  width: 75%;
+  position: absolute;
+  z-index: 1; /* Pastikan .wir berada di belakang */
+}
+
+/* CSS untuk animasi fade */
+.slider {
+  top: 25%;
+  align-items: center;
+  position: absolute;
+  height: 400px;
+  width: 850px;
+  opacity: 0; /* Menyembunyikan slider secara default */
+  transition: opacity 0.5s ease; /* Transisi opacity */
+  z-index: 2; /* Pastikan slider berada di atas .wir */
+}
+
+.slider.active {
+  opacity: 1; /* Menampilkan slider aktif */
+}
+
+
+.slider img.mtv1 {
+  position: relative;
+  width: 300px;
+  height: auto;
+  top: -50px;
+  right: -60px;
+}
+
+.slider p{
+  position: absolute;
+  right: 60px;
+  top: 30%;
+  transform: translateY(-50%);
+  color: white;
+  font-size: 20px;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%; /* Posisi vertikal di tengah slider */
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  z-index: 3; /* Pastikan tombol berada di atas slider */
+  font-size: 2rem;
+  transform: translateY(-50%); /* Vertikal center */
+}
+
+.nav-button.prev {
+  left: 20%; /* Jarak dari sisi kiri slider */
+}
+
+.nav-button.next {
+  right: 20%; /* Jarak dari sisi kanan slider */
+}
+
+
+.three {
+  position: relative;
+  width: 100%; /* Atau sesuai kebutuhan */ 
+  
+}
+
+.three .hiasan1{
+  width: 600px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background-color: #4b2138;
+  height: 50px;
+  z-index: 1;
+  border-radius: 50px 0 0 0;
+}
+
+.three h1{
+  width: 300px;
+  position: absolute;
+  top: 2%;
+  
+  font-family: 'Playfair Display', sans-serif;
+  font-weight: 600;
+  font-style: italic;
+  font-size: 50px;
+  color:  hsl(333, 11%, 80%);
+  background-color:#4b2138;
+  border-radius: 25px 0 50px 0;
+}
+
+.three img {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 450px; /* Sesuaikan ukuran sesuai kebutuhan */
+  height: auto; /* Menjaga rasio aspek gambar */
+  z-index: 2;
+}
+
+.three video {
+  position:absolute;
+  right: 25%;
+  top: 15%;
+  width: 800px; /* Lebar video */
+  margin: 2px;
+  z-index: 1;
+}
+
+
+/* Pastikan .four mengisi seluruh layar */
+.four {
+  position: relative;
+  background-color: #1b0c1b;
+  width: 100%;
+  height: 110vh; /* Mengisi seluruh viewport height */
+  overflow: hidden; /* Menghindari scroll jika ada elemen besar */
+}
+
+.four h1{
+  font-weight: 600;
+  font-style: italic;
+  font-family: 'Playfair Display', sans-serif;
+  font-size: 50px;
+  color: hsl(333, 11%, 80%);
+}
+
+.four .bagian {
+  position: absolute;
+  top: 10%;
+  width: 100%; /* Pastikan bagian ini memiliki lebar penuh */
+  height: 500px; /* Sesuaikan tinggi jika perlu */
+  margin: 0 auto; /* Pusatkan jika diperlukan */
+}
+
+/* CSS untuk galeri gambar */
+.gallery {
+  position: absolute;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 20px;
+}
+
+.gallery a {
+  margin: 5px;
+  display: block;
+  overflow: hidden;
+  position: relative;
+  width: 200px;
+  height: 150px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s;
+  border-radius: 25px;
+}
+
+.gallery a:hover img {
+  transform: scale(1.1);
+}
+
+/* CSS untuk lightbox */
+.lightbox-overlay {
+  display: none; 
+  position: fixed;
+  z-index: 10000; /* Pastikan lightbox berada di atas semua elemen lain */
+  left: 0;
+  top: 0;
+  width: 100%; 
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); 
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out; 
+}
+
+.lightbox-overlay.show {
+  display: flex;
+  opacity: 1;
+}
+
+.lightbox-overlay.hide {
+  display: none; 
+  opacity: 0; 
+}
+
+.lightbox-overlay img {
+  max-width: 90%;
+  max-height: 80%;
+  transition: transform 0.5s ease-in-out; 
+}
+
+/* CSS untuk close button */
+.close {
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Mengatur overflow body saat lightbox aktif */
+body.lightbox-active {
+  overflow: hidden;
+}
+
+
+/*dasar*/
+.dasar{
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  height: 80px;
+  width: 100%;
+  bottom: 7%;
+  background-color: #2d222f;
+  z-index: 1;
+  gap: 83px;
+  flex: 20px;
+}
+
+.dasar a{
+  top: 8px;
+  position: relative;
+  display: flex;
+  left: -3%;
+}
+
+.dasar img{
+  position: absolute;
+  z-index: 2;
+}
+.youtube{
+  width: 54px;
+}
+
+.ig{
+  top: 5px;
+  width: 40px;
+}
+
+.tw{
+  width: 65px;
+  top: 2px;
+}
+
+.gt{
+  width: 83px;
+  top: -13px;
+}
+
+#background-video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+body { 
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container::-webkit-scrollbar {
+  display: none;
+}
+
+/* header */
+header {
+  position: relative;
+  padding: 0 2rem;
+}
+
+nav {
+  width: 100%;
+  height: 60px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  padding: 10px;
+  background-color: transparent;
+  color: #fff;
+  transition: background-color 0.3s;
+}
+
+nav .logo a {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+nav .toggle_btn {
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.action_btn {
+  background-color: #4b2138;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.action_btn:hover {
+  transform: scale(1.05);
+  color: #fff;
+}
+
+.action_btn:active {
+  scale: 0.95;
+}
+
+.one {
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 80px;   
+}
+
+/* HERO */
+section#hero {
+  gap: 0 2rem;
+  width: 1200px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+#hero h1 a {
+  font-size: 2rem;
+  color: hsl(0, 0%, 100%); /* Warna teks default */
+  background-color: #361f2e; /* Background transparan */
+  border: 2px solid hsl(0, 0%, 100%); /* Border putih */
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  transition: background-color 0.4s ease, color 0.4s ease; /* Transisi latar belakang dan warna teks */
+  position: relative; /* Diperlukan untuk menempatkan pseudo-elemen */
+  overflow: hidden; /* Menyembunyikan border yang keluar dari elemen */
+}
+
+#hero h1 a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid hsl(0, 0%, 100%);
+  border-radius: 20px;
+  transition: background-color 0.4s ease, color 0.4s ease; /* Transisi untuk efek border */
+  pointer-events: none; /* Agar pseudo-elemen tidak mengganggu interaksi */
+  opacity: 0;
+}
+
+#hero h1 a:hover {
+  border-color: hsl(332, 100%, 25%);
+  animation: borderPulse 1s infinite; /* Infinite loop untuk efek denyut */
+}
+
+@keyframes borderPulse {
+  0% {
+    border-width: 2px;
+  }
+  50% {
+    border-width: 6px;
+  }
+  100% {
+    border-width: 2px;
+  }
+}
+
