@@ -1,2 +1,1 @@
-# Hanyatugas
-# Hannya tugas dari sekolah saya 
+# Hanya tugas dari sekolah saya 
